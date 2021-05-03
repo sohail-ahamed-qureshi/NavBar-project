@@ -1,0 +1,163 @@
+:root{
+    --transition: all .5s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: honeydew;
+
+}
+li{
+    list-style: none;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+nav{
+    display: inline-flex;
+    padding-left: 30px;
+    padding-top: 10px;
+    align-items: center;  
+}
+
+
+
+img{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+ul{
+    display: flex;
+   
+    
+}
+
+.pageLinks{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.socialLinks{
+    
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+
+}
+li{
+    height: auto;
+    flex: 1;
+}
+
+li:not(:last-child){
+  margin-right: 10px;  
+}
+
+.sideBar{
+    display: none;
+    
+}
+.sideBar-toggle{
+    display: none;
+}
+
+
+@media only screen and (max-width: 800px){
+
+    nav{
+        display: flex;
+    }
+
+    .sideBar-toggle{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        position: fixed;
+        top: 10%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+    
+
+.socialLinks, .pageLinks{
+    display: none;
+}
+
+.sideBar{
+    display: block;
+    height: 100vh;
+    width: 100vw;
+   position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: white;
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    transform: translate(-100%);
+   
+   
+}
+
+.show-sidebar{
+    transform: translate(0%);
+}
+
+.closeButton{
+    color: gray;
+    z-index: 1;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.sideBar-pageLinks {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.sideBar-pageLinks li:not(:last-child){
+    margin-bottom: 50px;  
+  }
+
+  .sideBar-socialLinks{
+      position: fixed;
+      bottom: 10%;
+    
+      
+  }
+  .sideBar-socialLinks li:not(:last-child){
+      margin-right: 20px;
+  }
+
+
+}
+
+
+
+
+
